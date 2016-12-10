@@ -163,3 +163,20 @@ FeriApp.controller('CotizacionController', function ($rootScope, $scope, $state)
         }
     };
 });
+FeriApp.controller('MainCtrl', function ($scope, Ionicitude) {
+    $scope.launchAR = function (ref) {
+        try {
+            // The ref passed as an argument to Ionicitude.launchAR() must be the name
+            // of a directory in the wikitude-worlds directory.
+            Ionicitude.launchAR(ref)
+              .then(function () {
+                  console.log('OK ! The ' + ref + ' AR World has been perfectly launched !');
+              })
+              .catch(function (error) {
+                  console.log('Error while trying to launch the ' + ref + ' AR World.', error);
+              })
+        } catch (error) {
+            console.log('But... Why ?! Something happened ?', error);
+        }
+    }
+});

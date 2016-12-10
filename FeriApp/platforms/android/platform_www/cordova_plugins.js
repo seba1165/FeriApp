@@ -47,6 +47,13 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/com.wikitude.phonegap.WikitudePlugin/www/WikitudePlugin.js",
+        "id": "com.wikitude.phonegap.WikitudePlugin.WikitudePlugin",
+        "clobbers": [
+            "WikitudePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -60,7 +67,8 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-geolocation": "2.4.0",
-    "phonegap-plugin-barcodescanner": "6.0.4"
+    "phonegap-plugin-barcodescanner": "6.0.4",
+    "com.wikitude.phonegap.WikitudePlugin": "5.3.1"
 };
 // BOTTOM OF METADATA
 });
