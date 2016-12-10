@@ -1,0 +1,26 @@
+﻿<ion-view title="Cotización de precios">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="card">  
+            <div class="item item-text-wrap">
+                <img src="{{productos[producto_index].imagen_producto}}" class="logo" style="max-width: 99%;max-height:250px;">
+            </div>
+            <div class="item item-divider">
+                <h1>{{productos[producto_index].nombre_producto}}</h1>
+                <h2>{{productos[producto_index].tipo_producto}}</h2>
+            </div>
+            <div ng-repeat="local in busqueda_producto_precio(productos[producto_index].id_producto)">
+                <div class="item">
+                    <h2>Precio: {{local.precio_producto| currency}} por {{local.unidad_medida}}</h2>
+                    <p>Local : {{(buscar_local(local.id_local)).nombre_local}}</p>
+                    <p>Fecha de ingreso: {{local.fecha_precio|date:"dd/MM/yyyy 'a las' h:mma"}}</p>
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-show="!busqueda_producto_precio(productos[producto_index].id_producto).length">
+                Actualmente no hay locales vendiendo este producto
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

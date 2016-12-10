@@ -1,0 +1,36 @@
+﻿/* Empty. Add your own CSS if you like */
+.facebook-blue{
+	background-color: #3B5998 !important;
+	border-color: #3B5998 !important;
+	color: white !important;
+}
+
+.googleplus-red{
+	background-color: #dd4b39 !important;
+	border-color: #dd4b39 !important;
+	color: white !important;
+}
+.logo {
+    display: block;
+    margin: auto;
+    }
+
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
+}
+#map2 {
+    width: 100%;
+    height: 100%;
+}
+.rating-block {
+  display: inline-block;
+}
+.rating-block ~ .button {
+  line-height:30px;
+  min-height:0;
+}

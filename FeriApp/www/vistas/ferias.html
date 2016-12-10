@@ -1,0 +1,16 @@
+﻿<ion-view title="Ferias">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="feria in ferias">
+                <a class="item item-thumbnail-left" ui-sref="app_usuario.mapaFeria" ng-click="captura_index(ferias.indexOf(feria))">
+                    <img src='{{feria.imagen_feria}}'>
+                    <h2>{{feria.nombre_feria}}</h2>
+                    <p>{{feria.comuna_feria}}</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

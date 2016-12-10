@@ -1,0 +1,20 @@
+﻿<ion-view title="Oferta">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="card">
+            <div class="item item-text-wrap">
+                <b>{{nombre_producto_de_oferta(ofertas[oferta_index].id_producto_oferta)}} a {{ofertas[oferta_index].precio_oferta}} por {{ofertas[oferta_index].medida_oferta}}</b>
+            </div>
+            <div class="item item-text-wrap">
+                <img src="{{imagen_feria_de_local_de_oferta(ofertas[oferta_index].id_local)}}">
+            </div>
+            <div class="item">
+                <h2>{{nombre_feria_de_local_de_oferta(ofertas[oferta_index].id_local)}}</h2>
+            </div>
+        </div>
+        <button class="button button-block button-balanced">Ir al local "{{(local_de_oferta(ofertas[oferta_index].id_local)).nombre_local}}"</button>
+
+    </ion-content>
+</ion-view>

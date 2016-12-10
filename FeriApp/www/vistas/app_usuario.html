@@ -1,0 +1,36 @@
+﻿<ion-side-menus>
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-balanced nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Volver</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">{{sesion_logueada.nombre_sesion}}</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close ui-sref="app_usuario.home_usuario">
+                    Inicio
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app_usuario.mapa">
+                    Explorar Mapa
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app_usuario.cotizacion">
+                    Cotización
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app_usuario.ferias">
+                    Ferias
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="scanBarcode()">
+                    Scanear QR
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="desloguear()">
+                    Cerrar Sesión
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,24 @@
+﻿<ion-view title="Inicio">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="card">
+            <a class="item item-avatar">
+                <img src="img/user_default.png">
+                <h1>Bienvenido</h1>
+                <p>{{sesion_logueada.nombre_sesion}}</p>
+            </a>
+            <div class="item item-divider">
+                Ofertas
+            </div>
+            <div ng-repeat="oferta in ofertas">
+            <a class="item item-thumbnail-left" ui-sref="app_usuario.oferta" ng-click="capturar_indice_oferta(ofertas.indexOf(oferta))">
+                <img src="{{imagen_feria_de_local_de_oferta(oferta.id_local)}}">
+                <h2>{{nombre_producto_de_oferta(oferta.id_producto_oferta)}} a {{oferta.precio_oferta}} por {{oferta.medida_oferta}}</h2>
+                <p>Local: {{(local_de_oferta(oferta.id_local)).nombre_local}}</p>
+                <p>Feria: {{nombre_feria_de_local_de_oferta(oferta.id_local)}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

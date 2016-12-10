@@ -1,0 +1,21 @@
+﻿<ion-view title="Cotización de precios">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Ingrese el nombre del producto" ng-model="search">
+            </label>
+        </div>
+        <div ng-repeat="producto in productos | filter: search">
+            <div class="item" ui-sref="app_usuario.resultado_cotizacion" ng-click="capturar_indice_producto(productos.indexOf(producto))">
+                <h2>{{ producto.nombre_producto }}</h2>
+                <p>{{producto.tipo_producto}}</p>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+

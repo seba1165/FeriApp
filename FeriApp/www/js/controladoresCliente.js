@@ -1,0 +1,1 @@
+﻿var FeriApp = angular.module('FeriApp');

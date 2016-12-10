@@ -1,0 +1,20 @@
+﻿<ion-view ng-controller="UserController">
+    <ion-header-bar align-title="left" class="bar-stable">
+        <button class="button button-light" ui-sref="root">
+            <i class="ion-arrow-left-c"></i> Volver
+        </button>
+        <h1 class="title">Inicio sesión cuenta FeriApp</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" placeholder="Correo" ng-model="data.mail">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Contraseña" ng-model="data.password">
+            </label>
+        </div>
+        <button class="button button-block button-balanced" ng-click="login()">Ingresar</button>
+        <div class="bar bar-assertive" ng-show="error_login">Correo o contraseña incorrecta.</div>
+    </ion-content>
+</ion-view>
