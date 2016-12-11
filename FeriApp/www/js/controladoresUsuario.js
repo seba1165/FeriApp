@@ -115,17 +115,17 @@ FeriApp.controller('MapaFeriaController', function ($rootScope, $scope, $state, 
 });
 
 FeriApp.controller('MuroFeriaController', function ($rootScope, $scope, $state, $stateParams, $cordovaGeolocation) {
-    $scope.cantLocales = function () {
-        var cantLocales = 0;
+    $scope.locales_de_feria = function (indice_feria) {
+        var locales_feria=[];
         for (var i in $rootScope.locales) {
-            if ($rootScope.ferias[$rootScope.feria_index].id_feria == $rootScope.locales[i].id_feria_local) {
-                cantLocales++;
+            if ($rootScope.ferias[indice_feria].id_feria == $rootScope.locales[i].id_feria_local) {
+                locales_feria.push($rootScope.locales[i]);
             }
         }
-        return cantLocales;
+        return locales_feria;
     };
+
     $scope.variable = 0;
-    $rootScope.feria_index = 0;
     $scope.ratingFull = {};
     $scope.ratingFull.rate = 3;
     $scope.ratingFull.max = 5;

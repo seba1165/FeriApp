@@ -115,11 +115,14 @@ FeriApp.controller('UserController', function ($http, $scope, $state, $rootScope
             $scope.campos_vacios_registro = true;
         }
     };
-    $scope.captura_index= function (indice) {
+    $rootScope.captura_index= function (indice) {
         $rootScope.feria_index = indice;
     };
-    $scope.capturar_indice_oferta = function (indice) {
+    $rootScope.capturar_indice_oferta = function (indice) {
         $rootScope.oferta_index = indice;
+    };
+    $rootScope.capturar_indice_local = function (indice) {
+        $rootScope.indice_local = indice;
     };
     $scope.local_de_oferta = function (id_local) {
         var local={};
@@ -346,6 +349,7 @@ FeriApp.controller('MenuController', function ($http, $scope, $state, $rootScope
                 if ($rootScope.locales[i].id_local == imageData.text) {
                     local = imageData.text;
                     $rootScope.indice_local = i;
+                    break;
                 }
             }
             if (typeof local !== "undefined") {

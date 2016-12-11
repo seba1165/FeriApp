@@ -14,20 +14,23 @@
                 <br />
                 <div class="card-title" style="position: center; top: 36%; font-size: 2.0em; width; 100%; font-weight: bold;">{{ferias[feria_index].nombre_feria}}</div>
                 <div class="card-subtitle" style="font-size: 1.0em; position: center; top: 52%; width: 100%;">{{ferias[feria_index].comuna_feria}}</div>
-                <div class="card-subtitle" style="font-size: 1.0em; position: center; top: 52%; width: 100%;">{{cantLocales()}} Locales</div>
             </ion-card>
         </div>
-        <!--a class="item item-thumbnail-left">
-            <img src='{{ferias[feria_index].imagen_feria}}'>
-            <h2>{{ferias[feria_index].nombre_feria}}</h2>
-            <p>{{ferias[feria_index].comuna_feria}}</p>
-        </!--a-->
         <div class="card">
             <div class="item item-divider" style="text-align: center;">
                 Calificación
             </div>
             <div class="item item-text-wrap" style="text-align: center">
                 <rating ng-model="ratingHalf.rate" max="ratingHalf.max"></rating>
+            </div>
+            <div class="item item-divider" style="text-align: center;">
+                Locales
+            </div>
+            <div ng-repeat="local in locales_de_feria(feria_index)">
+                <div class="item item-text-wrap" ui-sref="app_usuario.puesto" ng-click="capturar_indice_local(locales.indexOf(local))">
+                    <h2>{{local.nombre_local}}</h2>
+                    <p>{{local.descripcion_local}}</p>
+                </div>
             </div>
         </div>
     </ion-content>

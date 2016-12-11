@@ -1,10 +1,7 @@
-﻿<ion-view>
-    <ion-header-bar align-title="left" class="bar-stable">
-        <button class="button button-light" ui-sref="root">
-            <i class="ion-arrow-left-c"></i> Volver
-        </button>
-        <h1 class="title">Puesto {{locales[indice_local].id_local}}</h1>
-    </ion-header-bar>
+﻿<ion-view title="Local '{{locales[indice_local].nombre_local}}'">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
     <ion-content>
         Puesto de la Feria
     </ion-content>

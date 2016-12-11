@@ -14,7 +14,7 @@
                 <h2>{{nombre_feria_de_local_de_oferta(ofertas[oferta_index].id_local)}}</h2>
             </div>
         </div>
-        <button class="button button-block button-balanced">Ir al local "{{(local_de_oferta(ofertas[oferta_index].id_local)).nombre_local}}"</button>
+        <button ui-sref="app_usuario.puesto" ng-click="capturar_indice_local(locales.indexOf(local_de_oferta(ofertas[oferta_index].id_local)))" class="button button-block button-balanced">Ir al local "{{(local_de_oferta(ofertas[oferta_index].id_local)).nombre_local}}"</button>
 
     </ion-content>
 </ion-view>
