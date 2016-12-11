@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var FeriApp = angular.module('FeriApp', ['ionic', 'ngCordova', 'ionic.rating', 'IonicitudeModule']);
+var FeriApp = angular.module('FeriApp', ['ionic', 'IonicitudeModule','ngCordova', 'ionic.rating']);
 
 FeriApp.run(function ($ionicPlatform, Ionicitude) {
     $ionicPlatform.ready(function() {
@@ -33,6 +33,7 @@ FeriApp.run(function ($ionicPlatform, Ionicitude) {
       })
       .catch(function (error) {
           console.log("Hu-ho..! Something has failed !", error);
+          alert("Su dispositivo no es compatible con la realidad aumentada. No podra utilizar esta caracteristica");
       });
 
         // It suggested to declare your Action as named function instead of passing callbacks to Ionicitude.addAction().
@@ -194,17 +195,7 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'CotizacionController'
                 }
             }
-        })
-        .state('app_usuario.ionicitude', {
-            url: '/ionicitude',
-            views: {
-                'menuContent': {
-                    templateUrl: 'vistas/ionicitude.html',
-                    controller: 'MainCtrlr  '
-                }
-            }
         });
 
     $urlRouterProvider.otherwise('/');
 });
-

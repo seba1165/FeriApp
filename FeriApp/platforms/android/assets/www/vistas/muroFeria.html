@@ -30,6 +30,27 @@
                 <rating ng-model="ratingHalf.rate" max="ratingHalf.max"></rating>
             </div>
         </div>
+        <div ng-if="ferias[feria_index].id_feria == 1111">
+            <div class="bar bar-footer">
+                <button class="button button-block button-calm" ng-click="launchAR('FeriaModelo3')">
+                    Realidad Aumentada
+                </button>
+            </div>
+        </div>
+        <div ng-if="ferias[feria_index].id_feria == 2222">
+            <div class="bar bar-footer">
+                <button class="button button-block button-calm" ng-click="launchAR('FeriaDiinf')">
+                    Realidad Aumentada
+                </button>
+            </div>
+        </div>
+        <div ng-if="ferias[feria_index].id_feria == 3333">
+            <div class="bar bar-footer">
+                <button class="button button-block button-calm" ng-click="launchAR('FeriaDescanso')">
+                    Realidad Aumentada
+                </button>
+            </div>
+        </div>    
     </ion-content>
 
 </ion-view>
