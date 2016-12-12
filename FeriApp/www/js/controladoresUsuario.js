@@ -163,3 +163,48 @@ FeriApp.controller('CotizacionController', function ($rootScope, $scope, $state)
         }
     };
 });
+
+FeriApp.controller('MuroPuestoController', function ($rootScope, $scope, $state, $stateParams, $cordovaGeolocation) {
+    $rootScope.productos_del_local = function (id_local) {
+        var producto_local = [];
+        for (var i in $rootScope.precio_producto_local) {
+            if ($rootScope.id_local == $rootScope.precio_producto_local[i].id_local) {
+                producto_local.push($rootScope.precio_producto_local[i]);
+            }
+        }
+        return producto_local;
+    }
+    $rootScope.busqueda_producto = function (id_producto) {
+        var producto = {};
+        for (var i in $rootScope.productos) {
+            if ($rootScope.productos[i].id_producto == id_producto) {
+                producto = $rootScope.productos[i];
+                break;
+            }
+        }
+        return producto;
+    }
+    $rootScope.imagen_del_producto = function (id_producto) {
+        var img_producto = "";
+        for (var i in $rootScope.productos) {
+            if ($rootScope.productos[i].id_producto == id_producto) {
+                img_producto = $rootScope.productos[i].imagen_producto;
+                break;
+            }
+        }
+        return img_producto;
+    };
+
+    $scope.variable = 0;
+    $scope.ratingFull = {};
+    $scope.ratingFull.rate = 3;
+    $scope.ratingFull.max = 5;
+
+    $scope.ratingHalf = {};
+    $scope.ratingHalf.rate = 3.5;
+    $scope.ratingHalf.max = 5;
+
+    $scope.reset = function () {
+        $scope.ratingFull.rate = 0;
+    }
+});

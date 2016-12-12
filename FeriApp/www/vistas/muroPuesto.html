@@ -3,6 +3,43 @@
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-content>
-        Puesto de la Feria
+        <div class="card-background-page">
+            <ion-card style="position:relative; text-align:center">
+                <br />
+                <div style="top: 36%; font-size: 2.0em; width; 100%; font-weight: bold;">
+                    Información del Local
+                </div>
+                <br />
+                <div class="card-title" style="position: center;">{{locales[indice_local].descripcion_local}}</div>
+                <br />
+            </ion-card>
+        </div>
+        <div class="card">
+            <div class="item item-divider" style="text-align: center;">
+                Calificación del Puesto
+            </div>
+            <div class="item item-text-wrap" style="text-align: center">
+                <rating ng-model="ratingHalf.rate" max="ratingHalf.max"></rating>
+            </div>
+        </div>
+        <!--div class="card">
+            <div class="item item-divider">
+                Productos
+            </div>
+            zsxdfcgvhbnjm            
+            <div ng-repeat="producto in productos_del_local(indice_local)">
+                afsgashudjas
+                <p>{{producto.unidad_medida}}</p>
+                <div class="item item-text-wrap">
+                    afsgashudjas
+                    <h2>{{(busqueda_producto(producto.id_producto)).nombre_producto}}</h2>
+                    <img src="{{imagen_del_producto(producto.id_producto)}}" />                                      
+                    <p>{{producto.precio_producto | currency}}</p>
+                    <p>{{producto.unidad_medida}}</p>
+                    <p>{{producto.fecha_precio}}</p>                     
+                    <p>{{(busqueda_producto(producto.id_producto)).tipo_producto}}</p>
+                </div>
+            </div>            
+        </!--div-->
     </ion-content>
 </ion-view>

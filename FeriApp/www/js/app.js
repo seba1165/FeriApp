@@ -86,7 +86,7 @@ FeriApp.config(function ($stateProvider, $urlRouterProvider) {
             views: {
                 'menuContent': {
                     templateUrl: "vistas/muroPuesto.html",
-                    controller: "MenuController"
+                    controller: "MuroPuestoController"
                 }
             }
         })
